@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/19124a0e56.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="header">
+        <h1>Let's make your burger !!</h1>
+    </section>
+
+    <!-- Your Cart section begins  -->
+    <section class="sidebar-cart">
+        <h2> Your Cart </h2>
+
+        <div class="cart-items">
+            <table id="cart">
+            </table>
+        </div>
+
+        <div id="cart-amount">
+            <h2><span id="total_cart_price"></span></h2>
+        </div>
+    </section>
+    <!-- Your cart section ends  -->
+
+    <section class="content">
+        <div id="burger_maker">
+            <!-- Burger maker table begins  -->
+            <table>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                    <th>Payble Amount</th>
+                </tr>
+                <tr>
+                    <th>Bun</th>
+                    <td>Rs 29</td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        NA
+                    </td>
+                    <td id="bun_price">Rs 15</td>
+                </tr>
+
+                <tr>
+                    <th>Paties</th>
+                    <td>Rs 29</td>
+                    <td>
+                        <input type="radio" class="patticeQuantity" id="paties1" name="paties_quantity" value="1"
+                            required>
+                        <label for="1">1</label> &#160;
+                        <input type="radio" class="patticeQuantity" id="paties2" name="paties_quantity" value="2"
+                            required>
+                        <label for="2">2</label>
+                    </td>
+                    <td>
+                        <button id="delete_paties" class="btn-delete" type="submit"><i
+                                class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>Rs <span id="paties_price"> 0</span></td>
+                </tr>
+
+                <tr>
+                    <th>Saled</th>
+                    <td>Rs 29</td>
+                    <td> <input type="checkbox" id="saled1" name="saled_tomato" value="1" required>
+                        <label for="1">Tomato</label> <br>
+                        <input type="checkbox" id="saled2" name="saled_vegies" value="2" required>
+                        <label for="2">Vegies</label>
+                    </td>
+                    <td>
+                        <button id="delete_saled" class="btn-delete" type="submit"><i
+                                class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>Rs <span id="saled_price">0</span></td>
+                </tr>
+
+                <tr>
+                    <th>Cheese</th>
+                    <td>Rs 29</td>
+                    <td> <input type="radio" id="cheese1" name="cheese_quantity" value="1">
+                        <label for="1">1</label>&#160;
+                        <input type="radio" id="cheese2" name="cheese_quantity" value="2">
+                        <label for="2">2</label>
+                    </td>
+                    <td>
+                        <button id="delete_cheese" class="btn-delete" type="submit"><i
+                                class="fa-solid fa-trash"></i></button>
+                    </td>
+                    <td>Rs <span id="cheese_price"> 0</span> </td>
+                </tr>
+
+                <tr>
+                    <th colspan="3">
+                        <div id="burger_quantity">
+                            Quantity: &#160;
+                            <button class="btn-add" id="quantity_minus"><i class="fa-solid fa-minus"></i></button>
+                            &#160; <span id="quantity">1</span> &#160;
+                            <button class="btn-add" id="quantity_plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </th>
+                    <th colspan="2">
+                        <p>Total Amount: Rs <span id="burger_price">15</span></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        <button id="addtocart_burger" class="order" type="submit"> - Add to cart - </button>
+                    </th>
+                </tr>
+            </table>
+            <!-- Burger maker table ends  -->
+
+            <!-- Burger preview will be display here  -->
+            <div class="burger_preview">
+                <div id="bun"><img class='burger_element' src='assests/images/bun_top.png'></div>
+                <div id="paties"></div>
+                <div id="saled_tomato"></div>
+                <div id="saled_vegies"></div>
+                <div id="cheese"></div>
+                <div id="bun_bottom"><img class='burger_element' src='assests/images/bun_bottom.png'></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
